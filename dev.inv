@@ -1,7 +1,6 @@
-[servers]
-server1 ansible_host=13.127.159.229
-server2 ansible_host=3.110.108.196
-server3 ansible_host=15.206.147.225
-
-[all:vars]
+[server]   
+server1 ansible_host=65.0.124.234
+server2 ansible_host=13.235.71.29 
+server3 ansible_host=43.204.221.244                                                                                                                                                                                                            
+[all:vars]        
 ansible_python_interpreter=/usr/bin/python3
