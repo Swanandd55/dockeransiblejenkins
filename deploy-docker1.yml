@@ -51,14 +51,6 @@
       community.docker.docker_image:
         name: "swanandd55/webapp:{{DOCKER_TAG}}"
         source: pull
-
-    - name: Create default containers
-      community.docker.docker_container:
-        name: webapp
-        image: "swanandd55/webapp:{{DOCKER_TAG}}"
-        command: "{{ docker build . swanandd55/webapp:{{DOCKER_TAG}}}}"
-        state: present
-      with_sequence: count={{ container_count }}
     - name: Start the container
       docker_container:
         name: webapp
